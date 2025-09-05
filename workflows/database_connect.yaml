@@ -1,0 +1,9 @@
+name: DatabaseConnectWorkflow
+description: Use the connect_database MCP tool to check database connectivity.
+model: gpt-4.1
+prompt: |
+  You are a triage agent. Your goal is to test if the SQL Server database is reachable using the connect_database tool.
+  You should always call the connect_database tool and return the result to the user.
+tools:
+  - name: connect_database
+    description: Test the SQL Server database connection using the MCP tool. Always use this tool.
